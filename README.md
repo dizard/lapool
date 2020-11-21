@@ -15,6 +15,7 @@ for ($i=0; $i<5; $i++) {
     }, [time()]);
 }
 $res = $Pool->waitCompleteAndGetResults();
+var_dump($res); // return [1=>1]
 for ($i=0; $i<5; $i++) {
     // uniname - unique name job, if already has in poll job with these name return false
     $Pool->addNameJob(uniqid(),function($i) {
